@@ -16,6 +16,7 @@ import com.expediagroup.graphql.server.types.GraphQLServerRequest
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import graphql.GraphQL
 import graphql.GraphQLContext
+import io.bouckaert.basicgrdatabase.lambda.gql.PoliticianMutations
 import io.bouckaert.basicgrdatabase.lambda.gql.PoliticianQueries
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
@@ -36,7 +37,8 @@ class GraphQlLambdaRequestHandler : RequestHandler<APIGatewayProxyRequestEvent, 
                 "io.bouckaert.basicgrdatabase.lambda.gql"
             )
         ),
-        queries = listOf(TopLevelObject(PoliticianQueries))
+        queries = listOf(TopLevelObject(PoliticianQueries)),
+        mutations = listOf(TopLevelObject(PoliticianMutations))
     )
     private val graphQl = GraphQL.newGraphQL(graphQlSchema).build()
     private val graphQlRequestParser = object : GraphQLRequestParser<APIGatewayProxyRequestEvent> {
