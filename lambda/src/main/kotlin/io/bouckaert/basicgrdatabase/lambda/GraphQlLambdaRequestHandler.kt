@@ -64,7 +64,8 @@ class GraphQlLambdaRequestHandler : RequestHandler<APIGatewayProxyRequestEvent, 
     override fun handleRequest(input: APIGatewayProxyRequestEvent?, context: Context?): APIGatewayProxyResponseEvent =
         APIGatewayProxyResponseEvent().apply {
             headers = mapOf(
-                "Content-Type" to "application/json"
+                "Content-Type" to "application/json",
+                "Access-Control-Allow-Origin" to "*"
             )
             statusCode = if (input == null) 400 else 200
             body = if (input == null) null else json.writeValueAsString(

@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.8.22"
+    kotlin("jvm") version "1.9.20"
     application
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
@@ -26,7 +26,7 @@ tasks.test {
 }
 
 application {
-    mainClass.set("io.bouckaert.quicksa1.utility.Main")
+    mainClass.set("io.bouckaert.basicgrdatabase.utility.Main")
 }
 
 kotlin {

@@ -1,2 +1,2 @@
 rootProject.name = "basicgrdatabase"
-include("shared", "utility", "lambda")
+include("shared", "utility", "lambda", "client")
