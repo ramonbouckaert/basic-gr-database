@@ -10,8 +10,8 @@ This will produce `build` folders for each of the modules: `lambda`, `shared` an
 
 - `shared/build/libs/shared.jar` contains shared classes used by both the Lambda and the Utility tool
 - `lambda/build/libs/lambda-all.jar` is a shaded JAR that can be used as an AWS Lambda function
-- `utility/builds/libs/utility-all.jar` is a shaded executable JAR that provides a command-line utility for setting up,
-  populating, and testing a QuickSA1 database.
+- `utility/builds/libs/utility-all.jar` is a shaded executable JAR that provides a command-line utility for setting up a
+  basic-gr-database database.
 
 The build targets Java 17.
 
